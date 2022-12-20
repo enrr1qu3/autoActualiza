@@ -213,7 +213,9 @@ export const UpdateCar = (props) => {
           </Item>
 
           <Item label='Año'>
-            <DatePicker name='Year' placeholder={autoNuevo.Year.slice(0,4)} onChange={Año} picker="year" format={'YYYY'} />
+            <DatePicker name='Year' 
+            placeholder={(autoNuevo.Year)? autoNuevo.Year.slice(0,4): "agrege una fecha"}
+             onChange={Año} picker="year" format={'YYYY'} />
           </Item>
 
           <Item label='Serie'>
@@ -251,7 +253,9 @@ export const UpdateCar = (props) => {
             </Item>
 
             <Item label='Fecha Servicio'>
-              <DatePicker name='LastServiceDate' placeholder={autoNuevo.LastServiceDate.slice(0,10)} style={{ width: '100%' }} locale={locale} onChange={date} />
+              <DatePicker name='LastServiceDate' 
+              placeholder={(autoNuevo.LastServiceDate)? autoNuevo.LastServiceDate.slice(0,10): "agrege una fecha" } 
+              style={{ width: '100%' }} locale={locale} onChange={date} />
             </Item>
 
             <h1 className='text-center text-xl mb-4'> CheckList </h1>
