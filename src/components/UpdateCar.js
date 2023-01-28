@@ -39,7 +39,7 @@ export const UpdateCar = (props) => {
           Extinguisher: infoCarro.data.extinguisher,
           Serviced: infoCarro.data.serviced,
           InitialFuel: infoCarro.data.initialFuel,
-          LastServiceDate: infoCarro.data.lastServiceDate,
+          LastServiceDate: (infoCarro.data.lastServiceDate === null) ? "" : infoCarro.data.lastServiceDate,
           NewCarImageFile: infoCarro.data.carImageUrl
         },
 
